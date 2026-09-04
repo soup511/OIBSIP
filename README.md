@@ -142,8 +142,8 @@ To run the notebook locally, install the required libraries:
 pip install numpy pandas matplotlib seaborn scikit-learn
 
 Then open the `.ipynb` file using **Jupyter Notebook, JupyterLab, or Google Colab** and run the cells from beginning to end.
-
-##  Author
-**Souptika Das**
-
+````
+## Author
+Souptika Das
 B.Tech – Information Technology
+
