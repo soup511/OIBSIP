@@ -306,18 +306,7 @@ The exact numerical findings are generated directly from the dataset when the no
 
 ---
 
-##  Project Structure
 
-```text
-Unemployment-Analysis-India/
-│
-├── Unemployment_Analysis_India.ipynb
-├── README.md
-└── dataset/
-    └── Unemployment in India.csv
-```
-
----
 
 ##  How to Run
 
