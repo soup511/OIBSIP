@@ -701,7 +701,7 @@ This project demonstrates practical knowledge of:
 
 ---
 
-# ⚠️ Limitations
+#  Limitations
 
 * The dataset contains information about used cars available in the underlying CarDekho data and may not represent the entire used-car market.
 * Selling prices can be influenced by factors not included in the dataset, such as vehicle condition, location, service history, accident history, and additional features.
@@ -710,7 +710,7 @@ This project demonstrates practical knowledge of:
 
 ---
 
-# 🔮 Future Improvements
+#  Future Improvements
 
 The project could be extended by:
 
