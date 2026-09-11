@@ -388,19 +388,3 @@ Possible extensions include:
 B.Tech Information Technology
 RCC Institute of Information Technology
 
- GitHub:
-https://github.com/soup511
-
----
-
-##  Dataset Reference
-
-**Unemployment in India — Kaggle**
-
-https://www.kaggle.com/datasets/gokulrajkmv/unemployment-in-india
-
----
-
-⭐ **If you find this project useful, consider starring the repository!**
-
-
