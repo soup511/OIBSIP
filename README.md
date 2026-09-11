@@ -377,3 +377,358 @@ Possible extensions include:
 B.Tech Information Technology
 RCC Institute of Information Technology
 
+# 🚗 Car Price Prediction with Machine Learning
+
+##  Project Overview
+
+This project develops a **Machine Learning regression system to predict the selling price of used cars** based on vehicle characteristics and seller information.
+
+The project follows an end-to-end machine learning workflow:
+
+**Data Loading → Data Cleaning → Exploratory Data Analysis → Feature Engineering → Encoding → Model Training → Model Evaluation → Feature Analysis → Price Prediction**
+
+The objective is to understand the factors influencing used-car prices and build a model capable of estimating the selling price of a vehicle.
+
+---
+
+##  Objectives
+
+* Analyze the characteristics of used cars.
+* Understand factors affecting selling prices.
+* Clean and preprocess the dataset.
+* Engineer meaningful features from existing data.
+* Encode categorical variables for machine learning.
+* Train multiple regression models.
+* Compare model performance using standard regression metrics.
+* Identify important factors influencing car prices.
+* Demonstrate price prediction on a sample vehicle.
+
+---
+
+##  Dataset
+
+The project uses the **Car Details from CarDekho** dataset.
+
+The dataset contains information about used cars, including:
+
+| Feature         | Description                                |
+| --------------- | ------------------------------------------ |
+| `name`          | Name/model of the car                      |
+| `year`          | Manufacturing year                         |
+| `selling_price` | Selling price of the car — target variable |
+| `km_driven`     | Kilometres driven                          |
+| `fuel`          | Fuel type                                  |
+| `seller_type`   | Type of seller                             |
+| `transmission`  | Transmission type                          |
+| `owner`         | Ownership history                          |
+
+The original dataset contains **4,340 records and 8 columns**.
+
+---
+
+##  Technologies Used
+
+* **Python**
+* **Pandas**
+* **NumPy**
+* **Matplotlib**
+* **Seaborn**
+* **Scikit-learn**
+* **Google Colab / Jupyter Notebook**
+
+---
+
+##  Project Workflow
+
+### 1. Data Loading
+
+The dataset is loaded using Pandas and initially contains:
+
+* **4,340 rows**
+* **8 columns**
+
+The dataset includes numerical variables such as `year`, `selling_price`, and `km_driven`, along with categorical variables such as fuel type, seller type, transmission, and owner.
+
+---
+
+### 2. Data Cleaning
+
+The dataset was examined for:
+
+* Missing values
+* Duplicate records
+* Data types
+* Categorical inconsistencies
+
+No missing values were found in the dataset.
+
+A total of **763 duplicate records** were identified and removed.
+
+After removing duplicates, the dataset contained:
+
+**3,577 records and 8 columns.**
+
+---
+
+##  Feature Engineering
+
+Two additional features were created to improve the model:
+
+###  Car Age
+
+Car age was derived from the manufacturing year:
+
+```text
+Car_Age = Current Year - Manufacturing Year
+```
+
+This provides a more intuitive representation of vehicle depreciation.
+
+###  Brand
+
+The vehicle brand was extracted from the first word of the car name.
+
+For example:
+
+```text
+Maruti 800 AC → Maruti
+Hyundai Verna 1.6 SX → Hyundai
+Honda Amaze VX i-DTEC → Honda
+```
+
+This allows the model to capture differences between car manufacturers.
+
+---
+
+#  Exploratory Data Analysis
+
+The project explores how different vehicle characteristics relate to selling price.
+
+The analysis includes visualizations for factors such as:
+
+* Car age
+* Mileage
+* Fuel type
+* Transmission
+* Seller type
+* Ownership
+* Vehicle brand
+
+For example, a boxplot is used to compare selling prices across different transmission types.
+
+These visualizations help identify pricing patterns and potential outliers before model training.
+
+---
+
+#  Machine Learning Models
+
+Three regression algorithms were trained and compared.
+
+### 1. Linear Regression
+
+A baseline regression model used to establish a simple relationship between vehicle characteristics and selling price.
+
+### 2. Random Forest Regression
+
+An ensemble tree-based model capable of capturing nonlinear relationships between vehicle features and price.
+
+### 3. Gradient Boosting Regression
+
+A boosting-based ensemble method that sequentially improves predictions by learning from previous errors.
+
+Categorical features were converted using **OneHotEncoder**, implemented through a Scikit-learn `ColumnTransformer` and `Pipeline`.
+
+---
+
+#  Model Evaluation
+
+The models were evaluated using three standard regression metrics:
+
+### MAE — Mean Absolute Error
+
+Measures the average absolute difference between actual and predicted prices.
+
+**Lower MAE = better performance**
+
+### RMSE — Root Mean Squared Error
+
+Penalizes larger prediction errors more heavily.
+
+**Lower RMSE = better performance**
+
+### R² Score
+
+Measures how much of the variation in selling price is explained by the model.
+
+**Higher R² = better performance**
+
+The project compares all three models using these metrics.
+
+---
+
+##  Model Comparison
+
+The notebook generates a model-performance comparison using R² scores.
+
+The evaluated models achieve R² scores in the approximate range of:
+
+| Model             |     R² Score |
+| ----------------- | -----------: |
+| Linear Regression | ~0.421–0.589 |
+| Random Forest     | ~0.421–0.589 |
+| Gradient Boosting | ~0.421–0.589 |
+
+The exact model-to-score mapping should be taken from the final `results` table generated when the notebook is executed. The notebook selects the model with the **highest R² score as the best-performing model**.
+
+---
+
+#  Feature Importance
+
+Feature importance analysis is used to understand which vehicle characteristics have the greatest influence on predicted selling prices.
+
+This makes the project more interpretable by going beyond simply producing predictions.
+
+The analysis helps answer questions such as:
+
+* Does vehicle age strongly affect price?
+* How important is mileage?
+* Does brand influence resale value?
+* Does transmission type affect pricing?
+* How does ownership history contribute to price?
+
+---
+
+#  Example Prediction
+
+The trained Random Forest model is used to predict the selling price of a sample vehicle with characteristics such as:
+
+```text
+Kilometres Driven : 30,000
+Fuel              : Petrol
+Seller Type       : Dealer
+Transmission      : Manual
+Owner             : First Owner
+Car Age           : 5 years
+Brand             : Toyota
+```
+
+The notebook produces an example predicted selling price of approximately:
+
+**₹9,39,528**
+
+---
+
+#  Key Results
+
+The project demonstrates that used-car prices can be modeled using a combination of:
+
+* Vehicle age
+* Mileage
+* Brand
+* Fuel type
+* Seller type
+* Transmission
+* Ownership history
+
+Multiple regression algorithms were trained and evaluated using MAE, RMSE, and R².
+
+The model with the highest R² score is selected as the final model, followed by feature-importance analysis and an example price prediction.
+
+---
+
+#  How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/soup511/OIBSIP.git
+```
+
+### 2. Open the notebook
+
+Open:
+
+```text
+SouptikaDas_Task3.ipynb
+```
+
+using **Google Colab** or **Jupyter Notebook**.
+
+### 3. Install dependencies
+
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn
+```
+
+### 4. Add the dataset
+
+Place:
+
+```text
+CAR DETAILS FROM CAR DEKHO.csv
+```
+
+in the appropriate directory.
+
+### 5. Run the notebook
+
+Execute the cells sequentially from data loading through model evaluation and prediction.
+
+---
+
+#  Machine Learning Concepts Demonstrated
+
+This project demonstrates practical knowledge of:
+
+* Exploratory Data Analysis
+* Data Cleaning
+* Duplicate Detection
+* Feature Engineering
+* Categorical Encoding
+* One-Hot Encoding
+* Train-Test Split
+* Machine Learning Pipelines
+* Regression
+* Linear Regression
+* Random Forest Regression
+* Gradient Boosting
+* Model Comparison
+* MAE
+* RMSE
+* R² Score
+* Feature Importance
+* Predictive Modeling
+
+---
+
+# ⚠️ Limitations
+
+* The dataset contains information about used cars available in the underlying CarDekho data and may not represent the entire used-car market.
+* Selling prices can be influenced by factors not included in the dataset, such as vehicle condition, location, service history, accident history, and additional features.
+* The dataset's `name` field contains detailed model information, while the engineered `Brand` feature only extracts the first word.
+* Model performance depends on the available features and the train-test split.
+
+---
+
+# 🔮 Future Improvements
+
+The project could be extended by:
+
+* Hyperparameter tuning using GridSearchCV or RandomizedSearchCV.
+* Adding more detailed car-model features.
+* Applying cross-validation.
+* Testing XGBoost or other advanced boosting models.
+* Using SHAP for model explainability.
+* Building an interactive car-price prediction web application.
+* Deploying the final model using Streamlit or FastAPI.
+* Adding location, vehicle condition, service history, and insurance information.
+
+---
+
+#  Author
+
+**Souptika Das**
+
+B.Tech Information Technology
+RCC Institute of Information Technology
+
