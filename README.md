@@ -147,3 +147,260 @@ Then open the `.ipynb` file using **Jupyter Notebook, JupyterLab, or Google Cola
 Souptika Das
 B.Tech – Information Technology
 
+# 📊 Unemployment Analysis in India
+
+##  Overview
+
+This project performs **Exploratory Data Analysis (EDA)** on unemployment data from India to identify regional and temporal trends and analyze the impact of the **COVID-19 pandemic** on unemployment.
+
+The project uses Python to clean, analyze, visualize, and interpret unemployment, employment, and labour participation data across different Indian states.
+
+---
+
+##  Objectives
+
+* Analyze unemployment rates across Indian states.
+* Identify states with the highest average unemployment.
+* Study monthly unemployment trends.
+* Compare unemployment before and after COVID-19.
+* Analyze changes in employment and labour participation.
+* Identify states most affected by the COVID-19 shock.
+* Study correlations between major labour-market indicators.
+* Measure unemployment volatility across regions.
+
+---
+
+##  Dataset
+
+**Dataset:** Unemployment in India
+**Source:** Kaggle
+**Author:** Gokul Raj Kuppan
+
+🔗 **Kaggle Dataset:**
+https://www.kaggle.com/datasets/gokulrajkmv/unemployment-in-india
+
+The dataset contains state-wise and monthly information including:
+
+* Region
+* Date
+* Frequency
+* Estimated Unemployment Rate (%)
+* Estimated Employed
+* Estimated Labour Participation Rate (%)
+* Area
+
+> **Note:** The dataset provides `Estimated Employed`, not a direct `Employment Rate (%)`. Therefore, `Estimated Employed` is used as the employment indicator in this analysis.
+
+---
+
+##  Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Jupyter Notebook
+
+---
+
+##  Analysis Performed
+
+### 1. Data Cleaning
+
+* Loaded and inspected the dataset.
+* Checked dataset dimensions and data types.
+* Identified missing values.
+* Checked duplicate records.
+* Cleaned column names and categorical values.
+* Converted the date column into datetime format.
+
+### 2. Feature Engineering
+
+Created additional features including:
+
+* Year
+* Month
+* Month Name
+* COVID Period
+* COVID Shock
+
+### 3. State-wise Analysis
+
+Calculated state-wise:
+
+* Average unemployment rate
+* Average estimated employment
+* Average labour participation rate
+
+The **Top 10 states/regions with the highest average unemployment** were visualized using a bar chart.
+
+### 4. Time-Series Analysis
+
+Analyzed monthly unemployment trends to identify:
+
+* Long-term patterns
+* Major fluctuations
+* Peak unemployment periods
+* Changes during the COVID-19 period
+
+Selected major states were also compared using time-series line charts.
+
+### 5. COVID-19 Impact Analysis
+
+The data was divided into relevant COVID periods to compare:
+
+* Unemployment Rate
+* Estimated Employed
+* Labour Participation Rate
+
+This helps quantify how labour-market conditions changed during the pandemic.
+
+### 6. Correlation Analysis
+
+A correlation heatmap was created to examine relationships between:
+
+* Unemployment Rate
+* Estimated Employed
+* Labour Participation Rate
+
+### 7. Volatility Analysis
+
+Standard deviation was used to measure unemployment volatility across regions.
+
+This identifies states where unemployment experienced the largest fluctuations over time.
+
+### 8. Labour Participation vs Unemployment
+
+A scatter plot with a regression trend was used to examine the relationship between labour participation and unemployment.
+
+---
+
+##  Visualizations
+
+The project includes:
+
+*  Overall unemployment trend
+*  State-wise unemployment trends
+*  Top 10 states by average unemployment
+*  COVID-19 impact comparison
+*  Correlation heatmap
+*  Unemployment volatility analysis
+*  Labour participation vs unemployment
+*  State-wise COVID impact
+
+---
+
+##  Key Insights
+
+The analysis identifies:
+
+* Regions with the highest average unemployment.
+* Periods of peak unemployment.
+* Changes in unemployment during COVID-19.
+* Changes in estimated employment and labour participation.
+* States experiencing the greatest unemployment volatility.
+* Relationships between labour participation and unemployment.
+
+The exact numerical findings are generated directly from the dataset when the notebook is executed.
+
+---
+
+##  Project Structure
+
+```text
+Unemployment-Analysis-India/
+│
+├── Unemployment_Analysis_India.ipynb
+├── README.md
+└── dataset/
+    └── Unemployment in India.csv
+```
+
+---
+
+##  How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/soup511/unemployment-analysis-india.git
+```
+
+### 2. Install the required libraries
+
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+### 3. Download the dataset
+
+Download the dataset from Kaggle:
+
+https://www.kaggle.com/datasets/gokulrajkmv/unemployment-in-india
+
+Place the CSV file in the appropriate project directory.
+
+### 4. Run the notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```text
+Unemployment_Analysis_India.ipynb
+```
+
+and run all cells sequentially.
+
+---
+
+##  Limitations
+
+* The dataset covers a limited time period.
+* `Estimated Employed` represents an employment estimate rather than an employment-rate percentage.
+* State-level averages may hide rural/urban differences.
+* Correlation does not imply causation.
+* COVID-19 unemployment changes may also reflect other economic factors occurring during the same period.
+
+---
+
+##  Future Improvements
+
+Possible extensions include:
+
+* Adding newer unemployment data.
+* Rural vs urban unemployment analysis.
+* Gender-wise unemployment analysis.
+* Interactive dashboards using **Power BI or Tableau**.
+* Statistical hypothesis testing.
+* Unemployment forecasting.
+* Machine-learning-based unemployment prediction.
+
+---
+
+##  Author
+
+**Souptika Das**
+
+B.Tech Information Technology
+RCC Institute of Information Technology
+
+ GitHub:
+https://github.com/soup511
+
+---
+
+##  Dataset Reference
+
+**Unemployment in India — Kaggle**
+
+https://www.kaggle.com/datasets/gokulrajkmv/unemployment-in-india
+
+---
+
+⭐ **If you find this project useful, consider starring the repository!**
+
+
